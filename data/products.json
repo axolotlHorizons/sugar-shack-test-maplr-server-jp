@@ -1,0 +1,30 @@
+[
+  {
+    "id": "x-vYBPlCwTvcNP5wBVs3x",
+    "description": "L'incroyable sirop d'érable !",
+    "image": 
+"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.saveurs-erable.fr%2FSirop-d-erable-dore-Canne-Metal-p-749-c-4_8.html&psig=AOvVaw0LrU7sZsyRlKJD-bHT-6Ki&ust=1675452357701000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPi19sbI9_wCFQAAAAAdAAAAABAF",
+    "name": "Amber Sirop d'érable",
+    "price": 9.29,
+    "stock": 10,
+    "type": "AMBER"
+  },
+  {
+    "id": "2zzxbOI5hOHj2l5aiznAu",
+    "description": "Le sirop d'érable du côté obscure !",
+    "image": "https://www.ebrunch.fr/1407/product.jpg",
+    "name": "Dark Sirop d'érable",
+    "price": 15.99,
+    "stock": 8,
+    "type": "DARK"
+  },
+  {
+    "id": "kWlH_iee4WWVyf6k_9rZ3",
+    "description": "THE sirop d'érable !",
+    "image": "https://images.prismic.io/la-fourche/d96bbf03-d64c-478e-8f62-dce006a6621d_Sirop+d%27%C3%A9rable+artisanal.jpg?auto=compress,format",
+    "name": "CLEAR Sirop d'érable",
+    "price": 6.55,
+    "stock": 20,
+    "type": "CLEAR"
+  }
+]
