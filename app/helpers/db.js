@@ -2,8 +2,8 @@
 const productsFactory = require('./productsFactory');
 
 
-const PRODUCTS = [], ORDERS = [], NBFAKEPRODUCTS = 10 // Change this number to generate more or less fake data;
-let CARTS = [];
+const ORDERS = [], NBFAKEPRODUCTS = 10; // Change this number to generate more or less fake data
+let CARTS = [], PRODUCTS = [];
 
 
 /**
@@ -30,9 +30,18 @@ const getProductsCollection = () => {
         findOne: async (id) => {
             const product = await PRODUCTS.find(item => item.id === id); // Useless Await in this case, is just for simulate an asynchrone method
             return product;
+        },
+        updateStock: async (orderDetails) => {
+            let tmpListProduct = [...PRODUCTS];
+            orderDetails.products.forEach(orderProduct => {
+               let indexProduct = PRODUCTS.findIndex(product => product.id === orderProduct.id);
+               tmpListProduct[indexProduct].stock -= orderProduct.qty;
+            });
+            PRODUCTS = await [...tmpListProduct]; // Useless Await in this case, is just for simulate an asynchrone method
         }
     }
 };
+
 const getCartsCollection = () => {
     return {
         findOne: async () => {
@@ -43,7 +52,7 @@ const getCartsCollection = () => {
             let tmpCart = CARTS, isNew = false;
             tmpCart.forEach((item, index) => { // I check if the product is already in the cart, and change the item if it is
                 if (item.id === product.id) {
-                    if (item.stock === 0) {
+                    if (item.stock-1 === 0) {
                         throw new Error('empty-stock');
                     }
                     isNew = true;

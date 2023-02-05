@@ -11,7 +11,12 @@ const getProductById = (id) => {
     return db.getProductsCollection().findOne(id);
 }
 
+const updateStock = (orderDetail) => {
+    return db.getProductsCollection().updateStock(orderDetail);
+}
+
 module.exports = {
     getProducts,
-    getProductById
+    getProductById,
+    updateStock
 };
